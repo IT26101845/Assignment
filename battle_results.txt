@@ -1,0 +1,10 @@
+BATTLE RESULTS
+---------------
+
+Battleship Type: m
+Battleship Position: (54.00,12.00)
+
+Number of E ships hit by B: 0
+Battle Time: 0.00 seconds
+
+HIT ESCORT SHIPS
