@@ -2,28 +2,57 @@ NAVAL BATTLE SIMULATOR
 ======================
 
 Canvas Size: 100.00
-Number of Escort Ships: 3
+Number of Escort Ships: 5
 
 BATTLESHIP
-Type: m
-Position: (54.00,12.00)
+Type: U
+Position: (50.00,50.00)
+
+Maximum Velocity: 100.00
 
 ESCORT SHIPS
 
 Escort 1
-Type: ED
-Position: (3.29,5.90)
-Impact Power: 0.05
-Angle Range: 50.00 degrees
+Type: EB
+Position: (4.14,61.43)
+Impact Power: 0.06
+Minimum Velocity: 20.00
+Maximum Velocity: 76.00
+Minimum Angle: 0.00 degrees
+Maximum Angle: 30.00 degrees
 
 Escort 2
-Type: EB
-Position: (19.44,49.87)
-Impact Power: 0.06
-Angle Range: 30.00 degrees
+Type: EE
+Position: (57.43,57.52)
+Impact Power: 0.04
+Minimum Velocity: 17.00
+Maximum Velocity: 53.00
+Minimum Angle: 0.00 degrees
+Maximum Angle: 70.00 degrees
 
 Escort 3
-Type: EB
-Position: (55.30,70.29)
-Impact Power: 0.06
-Angle Range: 30.00 degrees
+Type: EC
+Position: (37.21,6.64)
+Impact Power: 0.07
+Minimum Velocity: 13.00
+Maximum Velocity: 74.00
+Minimum Angle: 0.00 degrees
+Maximum Angle: 25.00 degrees
+
+Escort 4
+Type: ED
+Position: (2.78,38.93)
+Impact Power: 0.05
+Minimum Velocity: 11.00
+Maximum Velocity: 51.00
+Minimum Angle: 0.00 degrees
+Maximum Angle: 50.00 degrees
+
+Escort 5
+Type: EC
+Position: (23.14,27.66)
+Impact Power: 0.07
+Minimum Velocity: 17.00
+Maximum Velocity: 68.00
+Minimum Angle: 0.00 degrees
+Maximum Angle: 25.00 degrees

@@ -163,6 +163,23 @@ int main()
 			E[i].angleMax = 70;
 		}
 	}
+
+
+	/* Velocity and angle properties */
+
+         printf("\nEnter Battleship maximum shell velocity: ");
+         scanf("%lf", &B.vMax);
+
+         for (int i = 0; i < N; i++)
+         {
+		 E[i].vMin = 10 + rand() % 11;
+                 E[i].vMax = 50 + rand() % 31;
+
+                 E[i].angleMin = 0;
+	 }
+
+
+
             
         /*Display properties*/
 	for (int i=0;i<N;i++)
@@ -194,6 +211,7 @@ int main()
 	fprintf(file, "BATTLESHIP\n");
 	fprintf(file, "Type: %c\n",B.type);
 	fprintf(file, "Position: (%.2f,%.2f)\n\n",B.x,B.y);
+	fprintf(file, "Maximum Velocity: %.2f\n\n", B.vMax);
 
 	fprintf(file, "ESCORT SHIPS\n");
 
@@ -203,7 +221,11 @@ int main()
 		fprintf(file, "Type: %s\n",E[i].type);
 		fprintf(file, "Position: (%.2f,%.2f)\n",E[i].x,E[i].y);
 		fprintf(file, "Impact Power: %.2f\n",E[i].impactPower);
-		fprintf(file, "Angle Range: %.2f degrees\n",E[i].angleMax);
+		fprintf(file, "Minimum Velocity: %.2f\n",E[i].vMin);
+                fprintf(file, "Maximum Velocity: %.2f\n",E[i].vMax);
+                fprintf(file, "Minimum Angle: %.2f degrees\n",E[i].angleMin);
+                fprintf(file, "Maximum Angle: %.2f degrees\n",E[i].angleMax);
+		
 	}
 
 	fclose(file);
@@ -274,7 +296,7 @@ int main()
 
 	if (battleshipSunk)
 	{
-		printf("\nBATTLESHIP IS SUNK!\n");
+		
 		printf("Escort ship %d sank the Battleship.\n",sinkingShip);
 	}
 
@@ -293,7 +315,7 @@ int main()
     {
         printf("\nBattleship is not sunk.\n");
 
-        for (int i = 0; i < N; i++)
+        for (int i = 0;i<N;i++)
         {
             distance = sqrt((E[i].x-B.x)*(E[i].x-B.x)+(E[i].y-B.y)*(E[i].y-B.y));
 
@@ -301,7 +323,7 @@ int main()
             {
                 hitCount++;
 
-                printf("Battleship hit Escort %d\n", i + 1);
+                printf("Battleship hit Escort %d\n", i+1);
             }
         }
 
@@ -330,6 +352,7 @@ int main()
 
        fprintf(resultFile,"Battleship Type: %c\n",B.type);
        fprintf(resultFile,"Battleship Position: (%.2f,%.2f)\n\n",B.x,B.y);
+       
        fprintf(resultFile,"Number of E ships hit by B: %d\n",hitCount);
        fprintf(resultFile,"Battle Time: %.2f seconds\n\n",battleTime);
        fprintf(resultFile,"HIT ESCORT SHIPS\n");
@@ -348,6 +371,52 @@ int main()
        printf("Battle results saved to battle_results.txt\n");
        }
    }
+
+
+   /*save final battlefield*/
+
+   FILE *finalFile;
+
+   finalFile = fopen("final_battlefield.txt","w");
+
+   if (finalFile == NULL)
+   {
+	   printf("Error creating final battlefield file.\n");
+	   return 1;
+   }
+
+   fprintf(finalFile,"FINAL BATTLEFIELD\n");
+   fprintf(finalFile,"------------------\n\n");
+
+   fprintf(finalFile,"Canvas Size: %.2f\n",D);
+
+   fprintf(finalFile,"Battleship\n");
+   fprintf(finalFile,"Type: %c\n",B.type);
+   fprintf(finalFile,"Position:(%.2f,%.2f)\n\n",B.x,B.y);
+
+   fprintf(finalFile,"Escort Ships\n");
+
+    for(int i=0;i<N;i++)
+    {
+	fprintf(finalFile,"\nEscort %d\n",i+1);
+        fprintf(finalFile,"Type: %s\n",E[i].type);
+        fprintf(finalFile,"Position:(%.2f,%.2f)\n",E[i].x,E[i].y);
+	fprintf(finalFile,"Status: %s\n",battleshipSunk && sinkingShip == i+1 ? "Sank Battleship": "Alive");
+    }
+
+    fclose(finalFile);
+
+    printf("Final battlefield saved to final_battlefield.txt\n");
+
+
+
+
+
+
+
+   
+
+    
 
 
 

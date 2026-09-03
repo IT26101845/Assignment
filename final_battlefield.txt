@@ -1,0 +1,34 @@
+FINAL BATTLEFIELD
+------------------
+
+Canvas Size: 100.00
+Battleship
+Type: U
+Position:(50.00,50.00)
+
+Escort Ships
+
+Escort 1
+Type: EB
+Position:(4.14,61.43)
+Status: Sank Battleship
+
+Escort 2
+Type: EE
+Position:(57.43,57.52)
+Status: Alive
+
+Escort 3
+Type: EC
+Position:(37.21,6.64)
+Status: Alive
+
+Escort 4
+Type: ED
+Position:(2.78,38.93)
+Status: Alive
+
+Escort 5
+Type: EC
+Position:(23.14,27.66)
+Status: Alive
