@@ -112,6 +112,67 @@ printf("\nPath points entered:\n");
         printf("Angle Range: %.2f degrees\n",ships[i].angleMax);
     }
 
+Battleship battleship;
+
+battleship.type='s';
+battleship.vMax=10.0;
+
+int destroyed[numberOfShips];
+
+for(int i=0;i<numberOfShips;i++)
+{
+	destroyed[i]=0;
+}
+
+printf("\nBATTLE SIMULATION\n");
+printf("------------------\n");
+
+
+for(int p=0;p<k;p++)
+{
+	battleship.x = pathX[p];
+	battleship.y = pathY[p];
+
+	printf("\nBattleship at point %d\n",p+1);
+	printf("Position: (%.2f,%.2f)\n",battleship.x,battleship.y);
+
+	for(int i=0;i<numberOfShips;i++)
+		{
+			if(destroyed[i]==1)
+			{
+				continue;
+			}
+
+
+			double dx = ships[i].x-battleship.x;
+			double dy = ships[i].y-battleship.y;
+
+			double distance = sqrt(dx*dx+dy*dy);
+
+			printf("Distance to Escort %d = %.2f\n",ships[i].id,distance);
+
+
+			double attackRange = 50.0;
+
+			if(distance<=attackRange)
+			{
+				printf("Escort %d is in attack range.\n",ships[i].id);
+				printf("Battleship hit Escort %d.\n",ships[i].id);
+				destroyed[i] = 1;
+			}
+			else
+			
+			{
+				printf("Escort %d is out of attack range.\n",ships[i].id);
+			}
+		}
+}
+
+			
+
+
+
+
 
 
     return 0;
