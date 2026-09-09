@@ -1,0 +1,248 @@
+          PART 2-C SIMULATION
+Battleship Type : u
+Initial Impact Power : 58.00
+Gamma : 45.0000
+
+Escort Ship Type : E
+Initial Impact Power : 54.00
+Gamma : 5.0000
+
+Number of Gun Firings : 58
+
+Impact Power Changes
+------------------------------------
+
+Firing 1
+Battleship Impact Power = 0.00
+Escort Impact Power     = 0.36
+
+Firing 2
+Battleship Impact Power = 0.00
+Escort Impact Power     = 0.00
+
+Firing 3
+Battleship Impact Power = 0.00
+Escort Impact Power     = 0.00
+
+Firing 4
+Battleship Impact Power = 0.00
+Escort Impact Power     = 0.00
+
+Firing 5
+Battleship Impact Power = 0.00
+Escort Impact Power     = 0.00
+
+Firing 6
+Battleship Impact Power = 0.00
+Escort Impact Power     = 0.00
+
+Firing 7
+Battleship Impact Power = 0.00
+Escort Impact Power     = 0.00
+
+Firing 8
+Battleship Impact Power = 0.00
+Escort Impact Power     = 0.00
+
+Firing 9
+Battleship Impact Power = 0.00
+Escort Impact Power     = 0.00
+
+Firing 10
+Battleship Impact Power = 0.00
+Escort Impact Power     = 0.00
+
+Firing 11
+Battleship Impact Power = 0.00
+Escort Impact Power     = 0.00
+
+Firing 12
+Battleship Impact Power = 0.00
+Escort Impact Power     = 0.00
+
+Firing 13
+Battleship Impact Power = 0.00
+Escort Impact Power     = 0.00
+
+Firing 14
+Battleship Impact Power = 0.00
+Escort Impact Power     = 0.00
+
+Firing 15
+Battleship Impact Power = 0.00
+Escort Impact Power     = 0.00
+
+Firing 16
+Battleship Impact Power = 0.00
+Escort Impact Power     = 0.00
+
+Firing 17
+Battleship Impact Power = 0.00
+Escort Impact Power     = 0.00
+
+Firing 18
+Battleship Impact Power = 0.00
+Escort Impact Power     = 0.00
+
+Firing 19
+Battleship Impact Power = 0.00
+Escort Impact Power     = 0.00
+
+Firing 20
+Battleship Impact Power = 0.00
+Escort Impact Power     = 0.00
+
+Firing 21
+Battleship Impact Power = 0.00
+Escort Impact Power     = 0.00
+
+Firing 22
+Battleship Impact Power = 0.00
+Escort Impact Power     = 0.00
+
+Firing 23
+Battleship Impact Power = 0.00
+Escort Impact Power     = 0.00
+
+Firing 24
+Battleship Impact Power = 0.00
+Escort Impact Power     = 0.00
+
+Firing 25
+Battleship Impact Power = 0.00
+Escort Impact Power     = 0.00
+
+Firing 26
+Battleship Impact Power = 0.00
+Escort Impact Power     = 0.00
+
+Firing 27
+Battleship Impact Power = 0.00
+Escort Impact Power     = 0.00
+
+Firing 28
+Battleship Impact Power = 0.00
+Escort Impact Power     = 0.00
+
+Firing 29
+Battleship Impact Power = 0.00
+Escort Impact Power     = 0.00
+
+Firing 30
+Battleship Impact Power = 0.00
+Escort Impact Power     = 0.00
+
+Firing 31
+Battleship Impact Power = 0.00
+Escort Impact Power     = 0.00
+
+Firing 32
+Battleship Impact Power = 0.00
+Escort Impact Power     = 0.00
+
+Firing 33
+Battleship Impact Power = 0.00
+Escort Impact Power     = 0.00
+
+Firing 34
+Battleship Impact Power = 0.00
+Escort Impact Power     = 0.00
+
+Firing 35
+Battleship Impact Power = 0.00
+Escort Impact Power     = 0.00
+
+Firing 36
+Battleship Impact Power = 0.00
+Escort Impact Power     = 0.00
+
+Firing 37
+Battleship Impact Power = 0.00
+Escort Impact Power     = 0.00
+
+Firing 38
+Battleship Impact Power = 0.00
+Escort Impact Power     = 0.00
+
+Firing 39
+Battleship Impact Power = 0.00
+Escort Impact Power     = 0.00
+
+Firing 40
+Battleship Impact Power = 0.00
+Escort Impact Power     = 0.00
+
+Firing 41
+Battleship Impact Power = 0.00
+Escort Impact Power     = 0.00
+
+Firing 42
+Battleship Impact Power = 0.00
+Escort Impact Power     = 0.00
+
+Firing 43
+Battleship Impact Power = 0.00
+Escort Impact Power     = 0.00
+
+Firing 44
+Battleship Impact Power = 0.00
+Escort Impact Power     = 0.00
+
+Firing 45
+Battleship Impact Power = 0.00
+Escort Impact Power     = 0.00
+
+Firing 46
+Battleship Impact Power = 0.00
+Escort Impact Power     = 0.00
+
+Firing 47
+Battleship Impact Power = 0.00
+Escort Impact Power     = 0.00
+
+Firing 48
+Battleship Impact Power = 0.00
+Escort Impact Power     = 0.00
+
+Firing 49
+Battleship Impact Power = 0.00
+Escort Impact Power     = 0.00
+
+Firing 50
+Battleship Impact Power = 0.00
+Escort Impact Power     = 0.00
+
+Firing 51
+Battleship Impact Power = 0.00
+Escort Impact Power     = 0.00
+
+Firing 52
+Battleship Impact Power = 0.00
+Escort Impact Power     = 0.00
+
+Firing 53
+Battleship Impact Power = 0.00
+Escort Impact Power     = 0.00
+
+Firing 54
+Battleship Impact Power = 0.00
+Escort Impact Power     = 0.00
+
+Firing 55
+Battleship Impact Power = 0.00
+Escort Impact Power     = 0.00
+
+Firing 56
+Battleship Impact Power = 0.00
+Escort Impact Power     = 0.00
+
+Firing 57
+Battleship Impact Power = 0.00
+Escort Impact Power     = 0.00
+
+Firing 58
+Battleship Impact Power = 0.00
+Escort Impact Power     = 0.00
+
+------------------------------------
+Simulation completed.
