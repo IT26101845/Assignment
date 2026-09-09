@@ -1,0 +1,47 @@
+PART 2-B NAVAL BATTLE SIMULATION
+=================================
+
+Battleship type: u
+Battleship final position: (85.00, 58.00)
+Total simulation time: 0.00 seconds
+Cumulative impact on B: 0.0000
+Cumulative impact: 0.00%
+Battleship survived.
+
+ESCORT SHIPS
+------------
+Escort 1
+Type: EA
+Position: 20.59 1.24
+Impact Power: 0.08
+Firing Interval: 4.00 seconds
+Status: Destroyed
+
+Escort 2
+Type: EE
+Position: 35.28 21.93
+Impact Power: 0.04
+Firing Interval: 8.00 seconds
+Status: Destroyed
+
+Escort 3
+Type: EC
+Position: 5.29 94.24
+Impact Power: 0.07
+Firing Interval: 6.00 seconds
+Status: Destroyed
+
+Escort 4
+Type: EB
+Position: 62.09 41.39
+Impact Power: 0.06
+Firing Interval: 5.00 seconds
+Status: Destroyed
+
+Escort 5
+Type: EA
+Position: 98.69 39.73
+Impact Power: 0.08
+Firing Interval: 4.00 seconds
+Status: Destroyed
+
