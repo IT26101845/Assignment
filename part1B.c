@@ -117,12 +117,17 @@ Battleship battleship;
 battleship.type='s';
 battleship.vMax=10.0;
 
+
+
 int destroyed[numberOfShips];
 
 for(int i=0;i<numberOfShips;i++)
 {
 	destroyed[i]=0;
 }
+
+int battleshipSunk=0;
+int sinkingShip=-1;
 
 printf("\nBATTLE SIMULATION\n");
 printf("------------------\n");
@@ -136,6 +141,31 @@ for(int p=0;p<k;p++)
 	printf("\nBattleship at point %d\n",p+1);
 	printf("Position: (%.2f,%.2f)\n",battleship.x,battleship.y);
 
+
+	char filename[100];
+	
+	sprintf(filename,"results/part1B_simulation1_step%d.txt",p+1);
+	
+	FILE *stepFile = fopen(filename, "w");
+	
+	
+	if (stepFile == NULL)
+	
+	{
+        printf("Error creating result file.\n");
+        return 1;
+	}
+
+
+    
+
+    fprintf(stepFile, "PART 1-B SIMULATION 1\n");
+    fprintf(stepFile, "=====================\n\n");
+
+    fprintf(stepFile, "Path Point %d\n", p+1);
+    fprintf(stepFile, "Battleship Position: (%.2f, %.2f)\n\n",battleship.x, battleship.y);
+
+/*attack code*/
 	for(int i=0;i<numberOfShips;i++)
 		{
 			if(destroyed[i]==1)
@@ -158,7 +188,10 @@ for(int p=0;p<k;p++)
 			{
 				printf("Escort %d is in attack range.\n",ships[i].id);
 				printf("Battleship hit Escort %d.\n",ships[i].id);
-				destroyed[i] = 1;
+				battleshipSunk=1;
+				sinkingShip=ships[i].id;
+
+				break;
 			}
 			else
 			
@@ -166,14 +199,58 @@ for(int p=0;p<k;p++)
 				printf("Escort %d is out of attack range.\n",ships[i].id);
 			}
 		}
+	if (battleshipSunk == 1)
+	{
+		printf("\nBATTLESHIP IS SUNK!\n");
+		printf("Escort ship %d sank the battleship.\n",sinkingShip);
+		break;
+
+	}
+	fclose(stepFile);
+
+
+FILE *file;
+
+file = fopen("part1B_results.txt","w");
+
+if(file==NULL)
+{
+	printf("Error opening results file.\n");
+	return 1;
 }
 
-			
+fprintf(file,"PART 1-B SIMULATION 1\n");
+fprintf(file,"----------------------\n\n");
+
+for (int p=0;p<k;p++)
+{
+	fprintf(file,"Path Point %d:(%.2f,%.2f)\n",p+1,pathX[p],pathY[p]);
+}
+fprintf(file,"\n");
+
+if(battleshipSunk==1)
+{
+	fprintf(file,"Battleship was sunk.\n");
+	fprintf(file,"Sinking Escort Ship: %d\n",sinkingShip);
+}
+else
+{
+	fprintf(file,"Battleship was not sunk.\n");
+}
+
+fclose(file);
+
+printf("\nSimulation results saved to part1B_results.txt\n");
 
 
 
 
 
 
-    return 0;
+
+
+
+}
+
+return 0;
 }
