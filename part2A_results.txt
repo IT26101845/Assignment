@@ -1,0 +1,115 @@
+PART 2-A NAVAL BATTLE SIMULATOR
+
+Battleship Type: M
+Battleship Position: (90.00, 90.00)
+Battleship Maximum Velocity: 56.00
+Time Between B Firings: 5.00 seconds
+Attack Range: 50.00
+
+ESCORT SHIPS
+============
+Escort 1
+Type: ED
+Position: (36.00, 75.00)
+Impact Power: 0.05
+Angle Range: 50.00 - 90.00 degrees
+
+Escort 2
+Type: ED
+Position: (53.00, 11.00)
+Impact Power: 0.05
+Angle Range: 50.00 - 90.00 degrees
+
+Escort 3
+Type: EB
+Position: (46.00, 19.00)
+Impact Power: 0.06
+Angle Range: 30.00 - 90.00 degrees
+
+Escort 4
+Type: EB
+Position: (84.00, 12.00)
+Impact Power: 0.06
+Angle Range: 30.00 - 90.00 degrees
+
+Escort 5
+Type: EE
+Position: (8.00, 99.00)
+Impact Power: 0.04
+Angle Range: 70.00 - 90.00 degrees
+
+Escort 6
+Type: EC
+Position: (58.00, 44.00)
+Impact Power: 0.07
+Angle Range: 25.00 - 90.00 degrees
+
+Escort 7
+Type: ED
+Position: (61.00, 98.00)
+Impact Power: 0.05
+Angle Range: 50.00 - 90.00 degrees
+
+Escort 8
+Type: EC
+Position: (26.00, 44.00)
+Impact Power: 0.07
+Angle Range: 25.00 - 90.00 degrees
+
+
+====================================
+SIMULATION 1 - PART 1-A STYLE
+====================================
+Time between B firings = 5.00 seconds
+
+Simulation Step 1
+Battleship Position: (90.00, 90.00)
+Attack Order:
+1. Escort 7 - Distance 30.08
+Time 5.00 : B attacks Escort 7
+
+====================================
+SIMULATION 2 - PART 1-B STYLE
+====================================
+
+Path Point 1
+Position: (76.00, 9.00)
+Escort 1 is out of attack range.
+Escort 2 is in attack range.
+Escort 3 is in attack range.
+Escort 4 is in attack range.
+Escort 5 is out of attack range.
+Escort 6 is in attack range.
+Escort 7 is out of attack range.
+Escort 8 is out of attack range.
+Attack order:
+1. Escort 4
+2. Escort 2
+3. Escort 3
+4. Escort 6
+Time 5.00 : Escort 4 destroyed.
+Time 10.00 : Escort 2 destroyed.
+Time 15.00 : Escort 3 destroyed.
+Time 20.00 : Escort 6 destroyed.
+
+Path Point 2
+Position: (28.00, 33.00)
+Escort 1 is in attack range.
+Escort 5 is out of attack range.
+Escort 7 is out of attack range.
+Escort 8 is in attack range.
+Attack order:
+1. Escort 8
+2. Escort 1
+Time 25.00 : Escort 8 destroyed.
+Time 30.00 : Escort 1 destroyed.
+
+====================================
+SIMULATION 3 - PART 1-C STYLE
+====================================
+Time between B firings = 5.00 seconds
+Attack order:
+1. Escort 7
+Time 5.00 : B destroys Escort 7
+Cumulative impact on B = 5.00%
+Battleship was not sunk.
