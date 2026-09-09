@@ -1,0 +1,51 @@
+PART 1-B SIMULATION 2
+=====================
+
+Theta minimum: 20.00 degrees
+Vertical angle range: 20.00 - 90.00 degrees
+
+Battleship at point 1
+Position: (47.00, 58.00)
+Distance to Escort 1 = 44.81
+Escort 1 is in attack range.
+Vertical angle to Escort 1 = 12.58 degrees
+Escort 1 cannot be attacked due to vertical angle.
+Distance to Escort 2 = 29.91
+Escort 2 is in attack range.
+Vertical angle to Escort 2 = 18.49 degrees
+Escort 2 cannot be attacked due to vertical angle.
+Distance to Escort 3 = 62.74
+Escort 3 is out of attack range.
+Distance to Escort 4 = 58.58
+Escort 4 is out of attack range.
+Distance to Escort 5 = 53.57
+Escort 5 is out of attack range.
+Distance to Escort 6 = 39.04
+Escort 6 is in attack range.
+Vertical angle to Escort 6 = 14.37 degrees
+Escort 6 cannot be attacked due to vertical angle.
+
+Battleship is not sunk.
+
+-------------------------
+
+Battleship at point 2
+Position: (65.00, 14.00)
+Distance to Escort 1 = 52.95
+Escort 1 is out of attack range.
+Distance to Escort 2 = 77.45
+Escort 2 is out of attack range.
+Distance to Escort 3 = 59.39
+Escort 3 is out of attack range.
+Distance to Escort 4 = 28.87
+Escort 4 is in attack range.
+Vertical angle to Escort 4 = 19.10 degrees
+Escort 4 cannot be attacked due to vertical angle.
+Distance to Escort 5 = 9.39
+Escort 5 is in attack range.
+Vertical angle to Escort 5 = 46.80 degrees
+Escort 5 can be attacked.
+Escort 5 attacks the Battleship.
+
+BATTLESHIP IS SUNK!
+Escort ship 5 sank the Battleship.
