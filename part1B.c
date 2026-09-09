@@ -205,8 +205,10 @@ for(int p=0;p<k;p++)
 		printf("Escort ship %d sank the battleship.\n",sinkingShip);
 		break;
 
-	}
+	
 	fclose(stepFile);
+	}
+
 
 
 FILE *file;
@@ -242,15 +244,175 @@ fclose(file);
 
 printf("\nSimulation results saved to part1B_results.txt\n");
 
-
-
-
-
-
-
-
-
 }
+
+
+
+
+
+printf("\nSIMULATION 2\n");
+printf("============\n");
+
+double thetaMin;
+
+printf("\nEnter thetaMin (0 < thetaMin < 30): ");
+scanf("%lf", &thetaMin);
+
+if (thetaMin <= 0 || thetaMin >= 30)
+{
+    printf("Invalid thetaMin.\n");
+    return 1;
+}
+
+printf("\nVertical angle range: %.2f - 90.00 degrees\n", thetaMin);
+
+
+
+
+for (int i = 0; i < numberOfShips; i++)
+{
+    destroyed[i] = 0;
+}
+
+battleshipSunk = 0;
+sinkingShip = -1;
+
+
+
+
+FILE *file2;
+
+file2 = fopen("part1B_simulation2_results.txt", "w");
+
+if (file2 == NULL)
+{
+    printf("Error opening simulation 2 results file.\n");
+    return 1;
+}
+
+fprintf(file2, "PART 1-B SIMULATION 2\n");
+fprintf(file2, "=====================\n\n");
+
+fprintf(file2, "Theta minimum: %.2f degrees\n",thetaMin);
+fprintf(file2, "Vertical angle range: %.2f - 90.00 degrees\n\n",thetaMin);
+
+
+for (int p = 0; p < k; p++)
+{
+    battleship.x = pathX[p];
+    battleship.y = pathY[p];
+
+    printf("\nBattleship at point %d\n", p+1);
+    printf("Position: (%.2f, %.2f)\n",
+           battleship.x, battleship.y);
+
+    fprintf(file2, "Battleship at point %d\n", p+1);
+    fprintf(file2, "Position: (%.2f, %.2f)\n",battleship.x, battleship.y);
+
+
+    for (int i=0; i<numberOfShips;i++)
+    {
+        if (destroyed[i] == 1)
+        {
+            continue;
+        }
+
+        double dx=ships[i].x - battleship.x;
+        double dy=ships[i].y - battleship.y;
+
+        double distance = sqrt(dx * dx + dy * dy);
+
+        printf("Distance to Escort %d = %.2f\n",ships[i].id, distance);
+
+        fprintf(file2, "Distance to Escort %d = %.2f\n",ships[i].id, distance);
+
+
+        double attackRange = 50.0;
+
+
+        if (distance<=attackRange)
+        {
+            printf("Escort %d is in attack range.\n",ships[i].id);
+
+            fprintf(file2, "Escort %d is in attack range.\n",ships[i].id);
+
+            double verticalAngle;
+
+            verticalAngle =
+                atan(battleship.vMax / distance) * 180.0 / M_PI;
+
+
+            printf("Vertical angle to Escort %d = %.2f degrees\n",ships[i].id, verticalAngle);
+
+            fprintf(file2,"Vertical angle to Escort %d = %.2f degrees\n",ships[i].id, verticalAngle);
+
+            if (verticalAngle>= thetaMin &&verticalAngle <= 90.0)
+            {
+                printf("Escort %d can be attacked.\n",ships[i].id);
+
+                fprintf(file2,"Escort %d can be attacked.\n",ships[i].id);
+
+
+                battleshipSunk = 1;
+                sinkingShip = ships[i].id;
+
+                printf("Escort %d attacks the Battleship.\n",ships[i].id);
+
+                fprintf(file2,"Escort %d attacks the Battleship.\n",ships[i].id);
+
+                break;
+            }
+            else
+            {
+                printf("Escort %d cannot be attacked due to vertical angle.\n",ships[i].id);
+
+                fprintf(file2,"Escort %d cannot be attacked due to vertical angle.\n",ships[i].id);
+            }
+        }
+        else
+        {
+            printf("Escort %d is out of attack range.\n",ships[i].id);
+
+            fprintf(file2,"Escort %d is out of attack range.\n",ships[i].id);
+        }
+    }
+
+
+    
+
+    if (battleshipSunk==1)
+    {
+        printf("\nBATTLESHIP IS SUNK!\n");
+        printf("Escort ship %d sank the Battleship.\n",sinkingShip);
+
+        fprintf(file2, "\nBATTLESHIP IS SUNK!\n");
+        fprintf(file2,"Escort ship %d sank the Battleship.\n",sinkingShip);
+
+        break;
+    }
+    else
+    {
+        printf("\nBattleship is not sunk.\n");
+
+        fprintf(file2,"\nBattleship is not sunk.\n");
+    }
+
+    printf("\n-------------------------\n");
+
+    fprintf(file2,"\n-------------------------\n\n");
+}
+
+
+
+
+fclose(file2);
+
+printf("\nSimulation 2 results saved to ");
+printf("part1B_simulation2_results.txt\n");
+
+
+
+
 
 return 0;
 }
