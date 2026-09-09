@@ -1,0 +1,15 @@
+PART 1-C SIMULATION RESULTS
+============================
+
+Battleship Position: (56.00, 58.00)
+
+Cumulative Impact on Battleship: 0.34
+Battleship was NOT sunk.
+
+ESCORT SHIPS
+------------
+Escort 1 | Type: EB | Impact: 0.10 | Destroyed
+Escort 2 | Type: ED | Impact: 0.15 | Destroyed
+Escort 3 | Type: EC | Impact: 0.12 | Alive
+Escort 4 | Type: EB | Impact: 0.10 | Alive
+Escort 5 | Type: EC | Impact: 0.12 | Alive
